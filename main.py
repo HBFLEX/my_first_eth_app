@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-infra_url = "https://mainnet.infura.io/v3/dc0d4ab019a74e3a9d30d94c22425d51"
+infra_url = os.environ.get('INFRA_URL')
 web3Client = Web3(Web3.HTTPProvider(infra_url))
 
 print('connecting to node...')
